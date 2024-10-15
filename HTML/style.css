@@ -1,0 +1,511 @@
+
+
+    @font-face {
+        font-family: ARJULIAN;
+        src: url('ARJULIAN.ttf');
+    }
+    @font-face {
+        font-family: RobotoMono;
+        src: url('RobotoMono.ttf');
+    }
+
+    h1,h2,h3,h4{
+        font-family: ARJULIAN;
+        color: #003c3bff;
+    }
+
+
+    #loader {
+        position: fixed;
+        z-index: 5;
+        width: 100%;
+        height: 100vh;
+        background-color: #f7faf9ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #loader.hidden {
+        animation: fadeOut 2s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeOut {
+        100% {
+            opacity: 0%;
+            visibility: hidden;
+        }
+    }
+
+    /*https://stackoverflow.com/questions/28978387/ease-in-animation-once-then-linear*/
+    .rotate{
+        animation: spinner 2s ease-in-out, spinner 3s linear 5s infinite;
+    }
+
+    @keyframes spinner {
+        to { transform: rotate(360deg); }
+    }
+
+    
+    @keyframes stop {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    
+
+    html{
+        width: 100%;
+        height: 100%;
+    }
+
+    body { 
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: #f7faf9ff;
+    }
+
+    .logo-name{
+        font-family: ARJULIAN;
+        font-size: 40pt;
+        color: #f2cdcdff;
+        padding-bottom: 40px;
+        text-decoration: none;
+        background-color: #003c3bff;
+        padding: 20px;
+        cursor: pointer;
+    }
+    
+    .logo-full{
+        display: grid;
+        max-width: 70%;
+        max-height: 70vh;
+        margin: auto;
+    }
+    
+    .logo-small{
+        width: 200px;
+    }
+
+
+    .header{
+        
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header div{ 
+        background-color: #003c3bff;
+        width: 100%;
+    }
+
+    .header-options{
+        
+        /*element setup*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 20%;
+
+        /*font setup*/
+        font-family: RobotoMono;
+        font-weight: bold;
+        color: #f7faf9ff;
+    }
+
+
+    p, li{
+        font-family: RobotoMono;
+        font-size: small;
+        text-align: left;
+        color: #003c3bff;
+    }
+
+    p > a{
+        background-color: #003c3bff;
+        border-radius: 10px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    button{
+        background-color: #003c3bff;
+        color: #f7faf9ff;
+        font-weight: bold;
+        font-family: RobotoMono;
+        border-radius: 20px;
+        width: 80%;
+        margin: auto;
+        padding: 8px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    button:hover{
+        color: #f2cdcdff;
+    }
+
+   
+    .vertical-divider{
+        padding: 0px;
+        margin: 0px;
+        border: 1px solid #003c3bff;
+        height: 100px;
+    }
+
+    hr.solid {
+        border-top: 3px solid #003c3bff;
+    }
+
+
+
+    /* unvisited link */
+    a {
+        text-decoration: none;
+        color: #f7faf9ff;
+        transition: color 0.3s ease;
+    }
+
+    /* visited link */
+    a:visited {
+        color: #f7faf9ff;
+    }
+
+    /* selected link */
+    a:active {
+        color: #f7faf9ff;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: #f2cdcdff;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f2cdcdff;
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #003c3bff;
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 40px 10px;
+        overflow: hidden;
+    
+        height: 70%;
+        bottom: 0;
+        font-family: RobotoMono;
+        text-align: left;  
+        color: #f7faf9ff;              
+        background-color: #003c3bff;
+    }
+
+
+    .shade{
+        height: 100px;
+        width: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0), rgb(0, 60, 59));
+    }
+
+    .shade2{
+        background-color: #a9a9a93b;
+        height: 10px;
+    }
+
+    .shade3{
+        height: 20px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background-image: linear-gradient(rgba(0,0,0,0), rgb(0, 60, 59));
+    }
+    
+    .shade4{
+        height: 20px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-image: linear-gradient(360deg, rgba(0,0,0,0), rgb(0, 60, 59));
+    }
+
+    .div-song-container{
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        color: #003c3bff;
+        background-color: #f2f2f2;
+
+        width: 50%;
+        margin: auto;
+        margin-bottom: 10px;
+        padding-top: 20px;
+        padding: 10px;
+    }
+
+    .div-song{
+        border-radius:12px; 
+        padding-top: 20px; 
+        padding-bottom: 20px; 
+        margin: auto;
+
+    }
+
+
+    .div-separator{
+        height: 5px;
+        width: 80%;
+        margin: auto;
+        margin-top:5%;
+        background-color: #003c3bff;
+        border-radius: 30px;
+    
+    }
+
+
+    .div-title{
+        /*font setup*/
+        font-weight: bold;
+        color: #f7faf9ff;
+
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: #003c3bff;
+    }
+
+
+    .div-section-col{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        border-radius: 10px;
+        transition: background-color 0.4s ease;
+    }
+
+    .div-section-row{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        transition: background-color 0.4s ease;
+    }
+
+    .div-section-item{
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        color: #003c3bff;
+        background-color: #f2f2f2;
+
+        width: 80%;
+        margin: auto;
+        margin-bottom: 10px;
+        transition: all 1s ease;
+    }
+
+    .div-section-item:hover{
+        width: 100%;
+    }
+
+
+    .div-section-item > p{
+        padding: 10px;
+    }
+
+    .div-section-item-header{
+        display: flex;
+        flex-direction: column;
+        color: #003c3bff;
+        text-align: left;
+        margin: 20px;
+    }
+  
+    .div-section-item-footer{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        border-radius: 10px;
+        color: #f2f2f2;
+        transition: background-color 0.4s ease;
+    }
+    .div-section-item-footer > p{
+        color: #f7faf9ff;
+    }
+
+    table{
+        font-family: RobotoMono;
+        width: 100%;
+        text-align: left;
+    }
+
+    td{
+        color: #003c3bff;
+        padding: 5px;
+    }
+
+    #table-none-selectable-row{
+        background-color: #f2f2f2;
+    }
+
+    .table-header{
+        padding: 5px;
+        background-color: #003c3bff;
+        color: #f7faf9ff;
+    }
+    
+    .table-data{
+        display: flex;
+    }
+    
+    .table-div{
+        width: 90%;
+    }
+
+    .table-justify{
+        text-align: center;
+    }
+
+    #table-selectable-row{
+        cursor: pointer;
+        color: #003c3bff;
+        background-color: #f2f2f2;
+        transition: background-color 0.1s ease;
+        .triangle{
+            margin: auto;
+            rotate: 0deg;
+            transition: rotate 0.4s ease;
+        }
+    }
+
+    #table-selectable-row:hover {
+        background-color: #a9a9a9;
+        .triangle{
+            rotate: 90deg;
+        }
+    }
+
+
+
+    #intro{
+        color: #003c3bff;
+        text-align: left;
+        margin: auto;
+        padding: 50px;
+        display: flex;
+        width: 80%;
+        overflow-x: auto;
+    }
+
+    #intro th{
+        padding:20px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-left: 2px solid #003c3bff;
+    }
+
+    #intro div{
+        height: 100px;
+
+    }
+
+    .triangle {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 20px solid #003c3bff;
+        margin-left: auto;
+        width: 1px;
+        height: 1px;
+        rotate: 0deg;
+        transition: rotate 0.4s ease;
+    }   
+    
+    
+     /*https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders*/
+     .option {
+        --b: 2px;   /* thickness of the border */
+        --c: #f7faf9ff;   /* color of the border */
+        --w: 10px;  /* width of border */
+        
+
+        border: var(--b) solid #0000; /* space for the border */
+        --_g: #0000 90deg,var(--c) 0;
+        --_p: var(--w) var(--w) border-box no-repeat;
+        background:
+            conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
+            conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
+            conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
+            conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
+        
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        width: 150px;
+        transition: width 0.2s ease-in-out;
+
+    }
+
+    .option:hover{
+        width: 80%;
+    }
+
+
+
+    /* Tooltip container */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover #demo{
+    animation: stop 0.5s ease-in-out;
+
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
