@@ -132,6 +132,7 @@
         color: #f7faf9ff;
     }
 
+ 
 
     p, li{
         font-family: RobotoMono;
@@ -183,6 +184,8 @@
         text-decoration: none;
         color: #f7faf9ff;
         transition: color 0.3s ease;
+        width: 100%;
+
     }
 
     /* visited link */
@@ -290,6 +293,20 @@
         background-color: #003c3bff;
     }
 
+    .div-title > a{
+        background-image: linear-gradient(rgba(242, 205, 205, 0.253),rgba(0,0,0,0));
+        border-radius: 10px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .div-title > div > a{
+        background-image: linear-gradient(rgba(242, 205, 205, 0.253), rgba(0,0,0,0));
+        border-radius: 10px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
 
     .div-section-col{
         width: 80%;
@@ -365,7 +382,7 @@
     .div-section-item-footer > p{
         color: #f7faf9ff;
         text-align: justify;
-        font-size: xx-small;
+        font-size: small;
     }
     .div-section-item-footer > h4{
         color: #f7faf9ff;
