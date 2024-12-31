@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ELYSIUM DOMINATION ARCHIVES</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preload" href="fonts/ARJULIAN.ttf" as="font" type="font/woff" crossorigin />
+        <link rel="preload" href="fonts/RobotoMono.ttf" as="font" type="font/woff" crossorigin />
+        <link rel="icon" type="image/png" href="images/favicon4.png">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script type = "text/javascript" src="js/loading.js"></script> 
+    </head>
+
+
+
+    <body>
+
+        <div class="shade-top"></div>
+        <div class="shade-bottom"></div>
+        <div id="loader">
+            <div id="loader-logo">
+                <div>
+                    <h1>ELYSIUM DOMINATION ARCHIVES</h1>
+                </div>
+                <div>
+                    <img src="images/DISC ELDA.png" class="logo-small rotate">                    
+                </div>
+            </div>
+        </div>    
+        
+
+        
+    
+
+        <main id="main-container">
+            <iframe src="header.html" style="width:100%; height:100%; border: none;" scrolling="no" frameBorder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight+50) +'px';"></iframe>
+            <iframe src="affiliations.html" style="width:100%; height:100%; border: none;" scrolling="no" frameBorder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight+45) +'px';"></iframe>
+        
+
+            <div class="div-section-col">
+                <iframe src="event.html" style="width:100%; height:100%; border: none;" scrolling="no" frameBorder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight+45) +'px';"></iframe>
+                <iframe src="newsletter.html" style="width:100%; height:100%; border: none;" scrolling="no" frameBorder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight+45) +'px';"></iframe>
+            </div>
+        
+
+            <div class="div-separator"></div>
+    
+        
+            <div class="div-section-col">
+                <h2 class="div-section-title">Rejoindre et Collaborer</h2>    
+                
+                <iframe src="sign.html" style="width:100%; height:100%; border: none;" scrolling="no" frameBorder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight+45) +'px';"></iframe>
+                <iframe src="OST.html" style="width:100%; height:100%; border: none;" scrolling="no" frameBorder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight+45) +'px';"></iframe>
+            </div>
+        
+            <div>
+                <img class="logo-full" src="images/ELDA - logo credit.png">
+            </div>    
+        </main>
+
+
+
+
+        <iframe src="footer.html" style="width:100%; height:100%; border: none;" scrolling="no" frameBorder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight+45) +'px';"></iframe>
+    </body>
+
+      
+    <script>
+        var main_container = document.getElementById("main-container");
+        console.log(main_container);
+
+        $("#link-demo").click(function(){
+            //main_container.innerHTML = "<iframe src='demo.html' style='outline: none; display:block;'></iframe>";
+            main_container.innerHTML = "";
+        });
+
+
+        document.getElementById("link-demo").addEventListener("click", myFunction);
+
+        function myFunction() {
+            main_container.innerHTML = "";
+        }
+    </script>
+</html>
+
